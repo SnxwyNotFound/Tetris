@@ -1,4 +1,3 @@
-
 import pygame
 
 window = pygame.display.set_mode((500,1000))
@@ -34,4 +33,3 @@ while run:
 
     pygame.display.update()
     clock.tick(40)
-print("heke")
