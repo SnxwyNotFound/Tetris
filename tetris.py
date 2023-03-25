@@ -1,4 +1,6 @@
 import pygame
+import random
+import blocks
 
 window = pygame.display.set_mode((500,1000))
 
@@ -7,11 +9,19 @@ run = True
 
 
 class Block():
-    def __init__(self, rect, color):
+    def __init__(self, rect, color, shape):
         self.rect = rect
         self.color = color
+        self.shape = shape
+        self.color = shape_colors[shapes.index(shape)]
+        self.rotation = 0 #number from 0-3
     def draw(self):
         pygame.draw.rect(window, self.color, self.rect)
+
+def get_shape():
+    global shapes, shape_colors
+
+    return Block(5, 0, random.choice(shapes))
 
 blocks = []
 
