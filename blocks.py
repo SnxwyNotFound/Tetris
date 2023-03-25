@@ -1,3 +1,5 @@
+import random
+
 #Green Block (S) - 2 Rotations
 S = [['.....',
       '.....',
@@ -111,3 +113,14 @@ T = [['.....',
 shapes = [S, Z, I, O, J, L, T]
 #Colors of The Shapes
 shape_colors = [(0, 255, 0), (255, 0, 0), (0, 255, 255), (255, 255, 0), (255, 165, 0), (0, 0, 255), (128, 0, 128)]
+
+class Shape():
+    def __init__(self, shape):
+        self.shape = shape
+        self.color = shape_colors[shapes.index(shape)]
+        self.rotation = 0  # number from 0-3
+
+def get_shape():
+    global shapes, shape_colors
+
+    return Shape(random.choice(shapes))
