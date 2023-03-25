@@ -38,12 +38,10 @@ shapes = [S, Z, I, O, J, L, T]
 # Colors of The Shapes
 shape_colors = [(0, 255, 0), (255, 0, 0), (0, 255, 255), (255, 255, 0), (255, 165, 0), (0, 0, 255), (128, 0, 128)]
 
-
 class Shape():
     def __init__(self, shapes):
         self.shapes = shapes
         self.color = shape_colors[shapes.index(shapes)]
-
 
 def get_shape():
     global shapes, shape_colors
@@ -51,3 +49,8 @@ def get_shape():
     return Shape(random.choice(shapes))
 
 ##### roations in game mechanics
+def rotate_shape(shape, rotation):
+    new_shape = []
+    #Somehow have to make the shapes rotate and return
+    new_shape.append(shape[rotation])
+    new_shape
