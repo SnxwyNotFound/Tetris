@@ -20,8 +20,8 @@ def rotate_counter_clockwise(shape):
     columns = len(shape[0])
     rotated_item = []
     new_list = []
-    for i in range(columns - 1, 0, -1):
-        for index in range(len(shape)- 1, 0, -1):
+    for i in range(columns - 1, -1, -1):
+        for index in range(len(shape) - 1, -1, -1):
             new_list.append(shape[index][i])
         rotated_item.append(new_list)
         new_list = []
@@ -31,7 +31,7 @@ def rotate_counter_clockwise(shape):
 # def place_block(shape):
 
 
-# def spawn_item(item):
-#     if item == blocks.I:
-#         spawn("row 22", "column 5,6")
+def spawn_item(item):
+    if item == blocks.I:
+        spawn("row 22", "column 5,6")
 print(rotate_counter_clockwise(blocks.S))
