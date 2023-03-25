@@ -1,6 +1,6 @@
 import random
 
-#Green Block (S) - 2 Rotations
+# Green Block (S) - 2 Rotations
 S = [['.....',
       '.....',
       '..00.',
@@ -12,7 +12,7 @@ S = [['.....',
       '...0.',
       '.....']]
 
-#Red Block (Z) - 2 Rotations
+# Red Block (Z) - 2 Rotations
 Z = [['.....',
       '.....',
       '.00..',
@@ -24,7 +24,7 @@ Z = [['.....',
       '.0...',
       '.....']]
 
-#Cyan Block (I) - 2 Rotations
+# Cyan Block (I) - 2 Rotations
 I = [['..0..',
       '..0..',
       '..0..',
@@ -36,14 +36,14 @@ I = [['..0..',
       '.....',
       '.....']]
 
-#Yellow Block (O) - No Rotation Needed
+# Yellow Block (O) - No Rotation Needed
 O = [['.....',
       '.....',
       '.00..',
       '.00..',
       '.....']]
 
-#Blue Block (J) - 4 Rotations
+# Blue Block (J) - 4 Rotations
 J = [['.....',
       '.0...',
       '.000.',
@@ -65,7 +65,7 @@ J = [['.....',
       '.00..',
       '.....']]
 
-#Orange Block (L) - 4 Rotations
+# Orange Block (L) - 4 Rotations
 L = [['.....',
       '...0.',
       '.000.',
@@ -87,7 +87,7 @@ L = [['.....',
       '..0..',
       '.....']]
 
-#Purple Block (T) - 4 Rotations
+# Purple Block (T) - 4 Rotations
 T = [['.....',
       '..0..',
       '.000.',
@@ -109,10 +109,11 @@ T = [['.....',
       '..0..',
       '.....']]
 
-#List Of Shapes
+# List Of Shapes
 shapes = [S, Z, I, O, J, L, T]
-#Colors of The Shapes
+# Colors of The Shapes
 shape_colors = [(0, 255, 0), (255, 0, 0), (0, 255, 255), (255, 255, 0), (255, 165, 0), (0, 0, 255), (128, 0, 128)]
+
 
 class Shape():
     def __init__(self, shapes):
@@ -120,13 +121,14 @@ class Shape():
         self.color = shape_colors[shapes.index(shapes)]
         self.rotation = 0  # number from 0-3
 
+
 def get_shape():
     global shapes, shape_colors
 
     return Shape(random.choice(shapes))
 
-def rotate_shape(shape, rotation):
-    new_shape = []
-    #Somehow have to make the shapes rotate and return
-    #new_shape.append(shape)
-    new_shape
+
+def rotate_clockwise(shape):
+    return [[shape[y][x]
+             for y in range(len(shape))]
+            for x in range(len(shape[0]) - 1, -1, -1)]
