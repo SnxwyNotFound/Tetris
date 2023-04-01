@@ -28,10 +28,7 @@ def rotate_counter_clockwise(shape):
     return rotated_item
 
 
-# def place_block(shape):
-
 
 def spawn_item(item):
     if item == blocks.I:
         spawn("row 22", "column 5,6")
-print(rotate_counter_clockwise(blocks.S))
