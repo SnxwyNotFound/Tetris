@@ -39,7 +39,6 @@ def rotate_counter_clockwise(shape):
         p.append(row)
     return p
 
-print(rotate_clockwise(blocks.L))
 
 def spawn_item(item):
     if item == blocks.I:
