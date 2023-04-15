@@ -12,7 +12,13 @@ def rotate_clockwise(shape):
             new_list.append(shape[index][i])
         rotated_item.append(new_list)
         new_list = []
-    return rotated_item
+    p = []
+    for i in rotated_item:
+        row = ""
+        for o in i:
+            row += o
+        p.append(row)
+    return p
 
 
 def rotate_counter_clockwise(shape):
@@ -25,9 +31,15 @@ def rotate_counter_clockwise(shape):
             new_list.append(shape[index][i])
         rotated_item.append(new_list)
         new_list = []
-    return rotated_item
+    p = []
+    for i in rotated_item:
+        row = ""
+        for o in i:
+            row+=o
+        p.append(row)
+    return p
 
-
+print(rotate_clockwise(blocks.L))
 
 def spawn_item(item):
     if item == blocks.I:
