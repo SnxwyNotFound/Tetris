@@ -55,4 +55,3 @@ def rotate_shape(shape, rotation):
     #Somehow have to make the shapes rotate and return
     new_shape.append(shape[rotation])
     new_shape
-print(S)
