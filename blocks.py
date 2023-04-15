@@ -48,10 +48,3 @@ def get_shape():
     global shapes, shape_colors
 
     return Shape(random.choice(shapes))
-
-##### roations in game mechanics
-def rotate_shape(shape, rotation):
-    new_shape = []
-    #Somehow have to make the shapes rotate and return
-    new_shape.append(shape[rotation])
-    new_shape
